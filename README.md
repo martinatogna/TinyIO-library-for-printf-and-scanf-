@@ -1,7 +1,7 @@
 # Custom Printf and Scanf Implementation with AXI UART Lite
 This project builds upon existing implementations of printf and scanf functionalities sourced from mpaland/printf and MuratovAS/mini-scanf. The goal is to redefine the _getchar() and _putchar() functions to utilize the AXI UART Lite IP from Xilinx.
 
-Project Overview
+# Project Overview
 The project focuses on adapting standard input/output operations (printf and scanf) to communicate over UART using the AXI UART Lite IP core. This approach involves:
 
 Implementing a custom UART structure based on the AXI UART Lite register map as specified in the Xilinx AXI UART Lite documentation.
