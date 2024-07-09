@@ -23,3 +23,27 @@ src/
 └── main.c # Example main file for testing the functions
 Makefile                      # Makefile for building the library and example
 README.md                     # This readme file
+
+```
+# Dependencies
+The project requires a development environment capable of compiling C/C++ code and targeting the specific architecture (e.g., ARM Cortex-M, Xilinx Zynq).
+Ensure that the necessary toolchain and libraries for your target platform are properly installed and configured.
+
+#Usage
+#Setup and Configuration:
+
+1. Clone this repository to your development environment.
+2. Configure the UART parameters (baud rate, data bits, etc.) in the UART initialization function (uart_init()).
+
+# Building the Project:
+Use the provided Makefile to compile the project. Adjust the Makefile according to your toolchain and project structure.
+
+# Testing:
+1. Modify the main.c or equivalent file to include printf and scanf statements for testing.
+2. Ensure that UART pins are correctly connected to your target device or development board.
+
+# Contribution
+Contributions to enhance and optimize the project are welcome. Please follow the guidelines:
+1. Fork the repository and create a feature branch.
+2. Make your changes, test thoroughly, and ensure compatibility.
+3. Submit a pull request detailing the changes made and the rationale behind them.
