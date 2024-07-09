@@ -21,7 +21,7 @@ src/
 ├── uart.c # Contains uart_send_char and uart_get_char functions
 ├── uart.h # Header file for UART functions
 └── main.c # Example main file for testing the functions
-Makefile                      # Makefile for building the library and example [TO DO]
+[TO DO] Makefile                      # Makefile for building the library and example [TO DO]
 README.md                     # This readme file
 
 ```
