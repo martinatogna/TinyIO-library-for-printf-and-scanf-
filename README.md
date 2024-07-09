@@ -11,6 +11,8 @@ Redefining _putchar() to wait until the transmit buffer (tx) is empty before sen
 These adaptations are essential to integrate UART communication seamlessly with the printf and scanf functionalities, allowing for serial communication in embedded systems or other applications where UART is utilized.
 
 ## File Structure
+The project directory is structured as follows:
+```plaintext
 src/
 ├── tinyIO.c # Main functions for initialization and interfacing
 ├── tinyIO.h # Header file for tinyIO functions
@@ -19,3 +21,5 @@ src/
 ├── uart.c # Contains uart_send_char and uart_get_char functions
 ├── uart.h # Header file for UART functions
 └── main.c # Example main file for testing the functions
+Makefile                      # Makefile for building the library and example
+README.md                     # This readme file
