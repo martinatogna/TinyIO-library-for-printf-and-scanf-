@@ -29,7 +29,6 @@ README.md                     # This readme file
 The project requires a development environment capable of compiling C/C++ code and targeting the specific architecture (e.g., ARM Cortex-M, Xilinx Zynq).
 Ensure that the necessary toolchain and libraries for your target platform are properly installed and configured.
 
-#Usage
 #Setup and Configuration:
 
 1. Clone this repository to your development environment.
