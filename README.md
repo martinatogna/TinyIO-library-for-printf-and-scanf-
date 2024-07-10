@@ -47,6 +47,7 @@ Contributions to enhance and optimize the project are welcome. Please follow the
 1. Fork the repository and create a feature branch.
 2. Make your changes, test thoroughly, and ensure compatibility.
 3. Submit a pull request detailing the changes made and the rationale behind them.
+
 This project demonstrates a robust implementation of standard I/O operations tailored for embedded systems, emphasizing the need to adapt these operations to specific serial communication interfaces for seamless integration and functionality.
 
 
