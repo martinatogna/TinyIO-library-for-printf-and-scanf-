@@ -30,10 +30,10 @@ README.md                     # This readme file
 The project requires a development environment capable of compiling C/C++ code and targeting the specific architecture (e.g., ARM Cortex-M, Xilinx Zynq).
 Ensure that the necessary toolchain and libraries for your target platform are properly installed and configured.
 
-#Setup and Configuration:
+# Setup and Configuration:
 
 1. Clone this repository to your development environment.
-2. Configure the UART parameters (baud rate, data bits, etc.) in the UART initialization function (uart_init()).
+2. Customize the serial communication parameters.
 
 # Building the Project:
 Use the provided Makefile to compile the project. Adjust the Makefile according to your toolchain and project structure.
