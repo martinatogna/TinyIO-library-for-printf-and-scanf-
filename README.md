@@ -1,14 +1,15 @@
-# Custom Printf and Scanf Implementation with AXI UART Lite
-This project builds upon existing implementations of printf and scanf functionalities sourced from [mpaland/printf](https://github.com/mpaland/printf/tree/master)
- and [MuratovAS/mini-scanf](https://github.com/MuratovAS/mini-scanf). The goal is to redefine the _getchar() and _putchar() functions to utilize the AXI UART Lite IP from Xilinx.
+# Custom Printf and Scanf Implementation
+TThis project leverages existing implementations of printf and scanf functionalities sourced from [mpaland/printf](https://github.com/mpaland/printf/tree/master)
+ and [MuratovAS/mini-scanf](https://github.com/MuratovAS/mini-scanf) adapting them to integrate seamlessly with custom I/O interfaces commonly found in embedded systems.
 
 # Project Overview
 The project focuses on adapting standard input/output operations (printf and scanf) to communicate over UART using the AXI UART Lite IP core. This approach involves:
 
-Implementing a custom UART structure based on the AXI UART Lite register map as specified in the [Xilinx AXI UART Lite Documentation](https://docs.amd.com/v/u/en-US/pg142-axi-uartlite).
-Redefining _getchar() to wait until a character is received (rx becomes non-empty) and then returning it.
-Redefining _putchar() to wait until the transmit buffer (tx) is empty before sending a character.
-These adaptations are essential to integrate UART communication seamlessly with the printf and scanf functionalities, allowing for serial communication in embedded systems or other applications where UART is utilized.
+The core of this project is the implementation of standard input/output operations (printf and scanf) tailored for embedded systems. It includes:
+- Implementation of standard printf and scanf functionalities from established libraries.
+- Customization of _putchar() to handle output operations efficiently.
+- Customization of _getchar() to manage input operations effectively.
+It's crucial to customize these implementations to seamlessly integrate with the specific serial communication interfaces.
 
 ## File Structure
 The project directory is structured as follows:
@@ -20,8 +21,8 @@ src/
 ├── scan.c # Contains the scanf implementation from [MuratovAS/mini-scanf](https://github.com/MuratovAS/mini-scanf). and _getchar function
 ├── uart.c # Contains uart_send_char and uart_get_char functions
 ├── uart.h # Header file for UART functions
-└── main.c # Example main file for testing the functions
-[TO DO] Makefile                      # Makefile for building the library and example [TO DO]
+|── main.c # Example main file for testing the functions
+Makefile                      # Makefile for building the library and example [TO DO]
 README.md                     # This readme file
 
 ```
@@ -39,10 +40,18 @@ Use the provided Makefile to compile the project. Adjust the Makefile according 
 
 # Testing:
 1. Modify the main.c or equivalent file to include printf and scanf statements for testing.
-2. Ensure that UART pins are correctly connected to your target device or development board.
+2. Ensure correct wiring and configuration of communication interfaces (e.g., UART pins or other communication methods) for your target embedded system.
 
 # Contribution
 Contributions to enhance and optimize the project are welcome. Please follow the guidelines:
 1. Fork the repository and create a feature branch.
 2. Make your changes, test thoroughly, and ensure compatibility.
 3. Submit a pull request detailing the changes made and the rationale behind them.
+This project demonstrates a robust implementation of standard I/O operations tailored for embedded systems, emphasizing the need to adapt these operations to specific serial communication interfaces for seamless integration and functionality.
+
+
+
+
+
+
+ 
