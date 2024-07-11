@@ -1,5 +1,5 @@
 # Custom Printf and Scanf Implementation
-TThis project leverages existing implementations of printf and scanf functionalities sourced from [mpaland/printf](https://github.com/mpaland/printf/tree/master)
+This project leverages existing implementations of printf and scanf functionalities sourced from [mpaland/printf](https://github.com/mpaland/printf/tree/master)
  and [MuratovAS/mini-scanf](https://github.com/MuratovAS/mini-scanf) adapting them to integrate seamlessly with custom I/O interfaces commonly found in embedded systems.
 
 # Project Overview
