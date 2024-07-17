@@ -14,17 +14,23 @@ It's crucial to customize these implementations to seamlessly integrate with the
 ## File Structure
 The project directory is structured as follows:
 ```plaintext
-src/
-├── tinyIO.c # Main functions for initialization and interfacing
-├── tinyIO.h # Header file for tinyIO functions
-├── print.c # Contains the printf implementation from [mpaland/printf](https://github.com/mpaland/printf/tree/master) and _putchar function
-├── scan.c # Contains the scanf implementation from [MuratovAS/mini-scanf](https://github.com/MuratovAS/mini-scanf). and _getchar function
-├── uart.c # Contains uart_send_char and uart_get_char functions
-├── uart.h # Header file for UART functions
-|── main.c # Example main file for testing the functions
-Makefile                      # Makefile for building the library and example [TO DO]
-README.md                     # This readme file
-
+├── src/
+│ ├── include/ # Cartella per i file header
+│ │ ├── tinyIO.h # Header file per tinyIO functions
+    ├── uart.h  #  Header file per le funzioni UART
+    ├── print.h # Header file per le funzioni della printf
+    ├── scan.h # Header file per le funzioni della scanf.
+│ ├── lib/
+│ │ ├── tinyIO.a # Libreria statica tinyIO.a
+│ ├── bin/
+│ │ ├── main # Eseguibile principale
+│ ├── tinyIO.c # Funzioni principali per l'inizializzazione e l'interfacciamento
+│ ├── print.c # Implementazione printf da mpaland/printf e funzione _putchar
+│ ├── scan.c # Implementazione scanf da MuratovAS/mini-scanf e funzione _getchar
+│ ├── uart.c # Funzioni uart_send_char e uart_get_char
+│ ├── main.c # File main di esempio per testare le funzioni
+│ ├── Makefile # Makefile per la compilazione della libreria e dell'esempio
+│ ├── README.md # Questo file readme
 ```
 # Dependencies
 The project requires a development environment capable of compiling C/C++ code and targeting the specific architecture (e.g., ARM Cortex-M, Xilinx Zynq).
