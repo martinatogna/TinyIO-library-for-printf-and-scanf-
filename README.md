@@ -1,4 +1,4 @@
-# A nostd library for scanf and printf implementation
+# A RISC-V nostd library for scanf and printf implementation
 TinyIO provides the C standard input/output operations (printf and scanf) to communicate over a serial phyisical device. The library is made of two open-source projects, 
 the [printf](https://github.com/mpaland/printf/tree/master) repo from Marco Paland, and the [mini-scanf](https://github.com/MuratovAS/mini-scanf) from MuratovAS.
 The core of this project is the implementation of standard input/output operations (printf and scanf) tailored for embedded systems. It includes:
