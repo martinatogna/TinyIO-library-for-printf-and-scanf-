@@ -28,6 +28,8 @@ The project directory is structured as follows:
 # Dependencies
 The project requires a development environment capable of compiling C/C++ code and targeting the specific architecture (edefault is riscv 32bit).
 Ensure that the necessary toolchain and libraries for your target platform are properly installed and configured.
+The files `src/uart.c` and `inc/uart.h` are hardware-dependant and must be provided for the specific UART device. Current version implements
+a Xilinx AXI4-lite UART device driver, with a blocking scanf. 
 
 # Usage
 By default, the project is configured to work with risc-v architecture and requires M-extension to be enabled.
