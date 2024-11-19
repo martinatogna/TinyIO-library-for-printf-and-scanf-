@@ -2,9 +2,9 @@
  * mini-scanf - Minimal scanf() implementation for embedded projects. 
  * Copyright (c) 2023 Aleksej Muratov
  */
-#include "include/scan.h"
+#include "scan.h"
 #include <stdint.h>
-#include "include/tinyIO.h"
+#include "tinyIO.h"
 // implementation of basic dependencies
 // std
 int c_isspace(const char c)
@@ -204,8 +204,9 @@ bool c_getbackch(char b)
 Calls uart_get_char() to retrieve a character received on UART (RX).
 Returns the character received from uart_get_char().
 */
+extern struct uart_t *global_uart;
 uint32_t _getchar(){
 
-    return uart_get_char();
+    return uart_get_char(global_uart);
 
 }

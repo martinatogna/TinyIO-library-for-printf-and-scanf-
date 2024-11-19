@@ -1,9 +1,9 @@
 #ifndef TINYIO_H
 #define TINYIO_H
 
-#include "print.h"
-#include "uart.h"
+//#include "print.h"
 #include "scan.h"
+#include "uart.h"
 
 /* Supported format specifiers:
  - %d, %i: Signed decimal integer conversion.
@@ -28,7 +28,7 @@ The use of `scanf` waits indefinitely for input, causing a block if no data is r
 
 /* Initializes UART communication at the provided base address.
   Sets up global_uart to point to the UART structure at baseaddr offset by UART_RX_FIFO_REG.Resets UART control registers to clear receive (RX) and transmit (TX) FIFOs */
-int32_t uart_init(uint32_t baseaddr);
+void tinyIO_init();
 
 #endif // TINYIO_H
 

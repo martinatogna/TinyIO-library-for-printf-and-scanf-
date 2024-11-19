@@ -29,8 +29,7 @@
 //        malloc for printf (and may not be thread safe).
 //
 ///////////////////////////////////////////////////////////////////////////////
-#include "include/print.h"
-#include "include/uart.h"
+#include "print.h"
 #include <stdbool.h>
 #include <stdint.h>
 // define this globally (e.g. gcc -DPRINTF_INCLUDE_CONFIG_H ...) to include the
@@ -147,11 +146,11 @@ static inline void _out_null(char character, void* buffer, size_t idx, size_t ma
  - Assumes global configuration of UART base address and FIFO settings.
  - Returns 0 after successfully transmitting the character.
  */
-uart_t *global_uart;
+extern struct uart_t *global_uart;
 uint32_t _putchar(char character){
 
-    global_uart = (uart_t *) (intptr_t) UART_BASE_ADDR + UART_RX_FIFO_REG ;
-    uart_send_char((uint8_t)character);
+    global_uart = (struct uart_t *) (intptr_t) UART_BASE_ADDR + UART_RX_FIFO_REG ;
+    uart_send_char(global_uart, (uint8_t)character);
     return 0;
 
 }
@@ -310,7 +309,6 @@ static size_t _ntoa_long(out_fct_type out, char* buffer, size_t idx, size_t maxl
 
   return _ntoa_format(out, buffer, idx, maxlen, buf, len, negative, (unsigned int)base, prec, width, flags);
 }
-
 
 // internal itoa for 'long long' type
 #if defined(PRINTF_SUPPORT_LONG_LONG)
