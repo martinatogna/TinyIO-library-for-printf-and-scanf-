@@ -13,7 +13,7 @@ OBJDUMP = 		$(RV_PREFIX)objdump
 C_EXTENSION 	?= N
 F_EXTENSION		?= N
 
-ARCH = rv32ima
+ARCH = rv32imad
 
 ifeq ($(F_EXTENSION), Y) 
 ARCH := $(addsuffix f,$(ARCH))
