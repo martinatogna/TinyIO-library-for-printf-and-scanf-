@@ -146,11 +146,10 @@ static inline void _out_null(char character, void* buffer, size_t idx, size_t ma
  - Assumes global configuration of UART base address and FIFO settings.
  - Returns 0 after successfully transmitting the character.
  */
-extern struct uart_t *global_uart;
+
 uint32_t _putchar(char character){
 
-    global_uart = (struct uart_t *) (intptr_t) UART_BASE_ADDR + UART_RX_FIFO_REG ;
-    uart_send_char(global_uart, (uint8_t)character);
+    uart_send_char((uint8_t)character);
     return 0;
 
 }

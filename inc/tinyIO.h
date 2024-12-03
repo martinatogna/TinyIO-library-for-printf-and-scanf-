@@ -28,7 +28,7 @@ The use of `scanf` waits indefinitely for input, causing a block if no data is r
 
 /* Initializes UART communication at the provided base address.
   Sets up global_uart to point to the UART structure at baseaddr offset by UART_RX_FIFO_REG.Resets UART control registers to clear receive (RX) and transmit (TX) FIFOs */
-void tinyIO_init();
+void tinyIO_init(uint32_t uart_base_addr);
 
 #endif // TINYIO_H
 

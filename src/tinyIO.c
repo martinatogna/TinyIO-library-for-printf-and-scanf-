@@ -1,9 +1,9 @@
 #include "tinyIO.h"
 
-struct uart_t * global_uart;
+//struct uart_t * global_uart;
 
-void tinyIO_init() {
+void tinyIO_init(uint32_t uart_base_addr) {
 
-    if(!global_uart) global_uart = uart_init(UART_BASE_ADDR);
+    uart_init(uart_base_addr);
 
 }

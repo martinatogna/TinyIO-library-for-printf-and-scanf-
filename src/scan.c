@@ -179,6 +179,7 @@ int	c_isdigit(int c)
 char backch = 0;
 char c_getch()
 {
+    return (char)_getchar();
 	if(backch == 0)
 		return (char)_getchar();
 	else
@@ -204,9 +205,9 @@ bool c_getbackch(char b)
 Calls uart_get_char() to retrieve a character received on UART (RX).
 Returns the character received from uart_get_char().
 */
-extern struct uart_t *global_uart;
+
 uint32_t _getchar(){
 
-    return uart_get_char(global_uart);
+    return uart_get_char();
 
 }
