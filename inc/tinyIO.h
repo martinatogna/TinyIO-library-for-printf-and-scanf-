@@ -1,9 +1,8 @@
 #ifndef TINYIO_H
 #define TINYIO_H
 
-//#include "print.h"
 #include "scan.h"
-#include "uart.h"
+#include "print.h"
 
 /* Supported format specifiers:
  - %d, %i: Signed decimal integer conversion.
