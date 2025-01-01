@@ -5,10 +5,8 @@ struct uart_t * global_uart;
 
 void uart_init(uint32_t baseaddr) {
 
-    if(!global_uart) {
-        global_uart = (struct uart_t *) ((intptr_t) baseaddr + UART_RX_FIFO_REG) ;
-        global_uart->ctrl_reg = UART_RX_RESET | UART_TX_RESET;	
-    }
+	global_uart = (struct uart_t *) ((intptr_t) baseaddr + UART_RX_FIFO_REG) ;
+	global_uart->ctrl_reg = UART_RX_RESET | UART_TX_RESET;	
 
 }
 
