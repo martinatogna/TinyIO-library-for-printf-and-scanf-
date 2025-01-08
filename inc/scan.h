@@ -15,6 +15,7 @@
 #include <stdint.h>
 #include <stdarg.h>
 #include <stdbool.h>
+#include "uart.h"
 
 #ifndef NULL
 #define NULL 0

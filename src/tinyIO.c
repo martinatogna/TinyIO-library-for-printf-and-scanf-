@@ -1,9 +1,9 @@
-#include "include/tinyIO.h"
+#include "tinyIO.h"
 
-int32_t uart_init(uint32_t baseaddr) {
+//struct uart_t * global_uart;
 
-    global_uart = (uart_t *) (intptr_t) baseaddr + UART_RX_FIFO_REG ;
-    global_uart->ctrl_reg = UART_RX_RESET | UART_TX_RESET;	
+void tinyIO_init(uint32_t uart_base_addr) {
 
-	return 0;
+    uart_init(uart_base_addr);
+
 }
